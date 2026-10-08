@@ -1,0 +1,73 @@
+name: Check VLESS Reality nodes
+
+on:
+  schedule:
+    # GitHub schedules use UTC and may start a few minutes late.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/source.txt"
+      - "scripts/check_configs.py"
+      - ".github/workflows/health-check.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vless-reality-health-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download and verify pinned Xray-core
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="v26.3.27"
+          SHA256="23cd9af937744d97776ee35ecad4972cf4b2109d1e0fe6be9930467608f7c8ae"
+          URL="https://github.com/XTLS/Xray-core/releases/download/${VERSION}/Xray-linux-64.zip"
+          curl -fsSL --retry 3 --connect-timeout 15 "$URL" -o /tmp/xray.zip
+          echo "${SHA256}  /tmp/xray.zip" | sha256sum --check
+          mkdir -p .tools/xray
+          unzip -q /tmp/xray.zip xray -d .tools/xray
+          chmod +x .tools/xray/xray
+          .tools/xray/xray version
+
+      - name: Health-check configs and refresh subscription
+        run: >-
+          python3 scripts/check_configs.py
+          --source config/source.txt
+          --state state/probe-state.json
+          --out-dir dist
+          --xray .tools/xray/xray
+          --workers 4
+          --timeout 12
+          --failures-before-removal 2
+
+      - name: Commit state and generated subscription
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/probe-state.json dist
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "chore: refresh VLESS Reality health status"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
