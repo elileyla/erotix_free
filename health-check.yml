@@ -2,13 +2,12 @@ name: Check VLESS Reality nodes
 
 on:
   schedule:
-    # GitHub schedules use UTC and may start a few minutes late.
     - cron: "0 */6 * * *"
   workflow_dispatch:
   push:
     paths:
-      - "config/source.txt"
-      - "scripts/check_configs.py"
+      - "source.txt"
+      - "check_configs.py"
       - ".github/workflows/health-check.yml"
 
 permissions:
@@ -49,8 +48,8 @@ jobs:
 
       - name: Health-check configs and refresh subscription
         run: >-
-          python3 scripts/check_configs.py
-          --source config/source.txt
+          python3 check_configs.py
+          --source source.txt
           --state state/probe-state.json
           --out-dir dist
           --xray .tools/xray/xray
