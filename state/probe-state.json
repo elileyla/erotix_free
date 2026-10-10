@@ -21,8 +21,8 @@
   },
   "06271564c75072bc3610bee70ad4c134bf65024419327cd7e7184cc2976b2d75": {
     "ever_ok": true,
-    "failures": 1,
-    "last_status": "grace"
+    "failures": 2,
+    "last_status": "failed"
   },
   "0b4ca6c91e52bf5848e66cb92cf98aae28c7b01d3c0c9da62d933887a13d0012": {
     "ever_ok": true,
@@ -36,7 +36,7 @@
   },
   "0d900a6a7f02e059afce31d9121b9983f95a1382302bc1955b95fe5258ec959a": {
     "ever_ok": true,
-    "failures": 5,
+    "failures": 6,
     "last_status": "failed"
   },
   "0e59381df5e063cfc81a5d0035f2ea9202ebc3bea0140e06ac13b2d1e7d90f18": {
@@ -81,12 +81,12 @@
   },
   "23f1acbd9ba4aad6f3e11d0459a93ffe49103068690b0564556c07ca59bb037b": {
     "ever_ok": true,
-    "failures": 1,
-    "last_status": "grace"
+    "failures": 2,
+    "last_status": "failed"
   },
   "2784514c0e934bfb8d5a1be144b568d19ac16ca04f55cd84c6875f1b850f46dd": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "2914e1f53a023142a34a24f49a1bd149e6534608d64205df34c506983d8f849d": {
@@ -101,12 +101,12 @@
   },
   "2c2039b2c843469913f244f3ff1ac5135fcd9d3246d601f81156fdb610e450f6": {
     "ever_ok": true,
-    "failures": 5,
+    "failures": 6,
     "last_status": "failed"
   },
   "2f9ddc4276ba0692b7d5e198cc07c94bb2087474dc145b7bef320d1b0ad173be": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "2faf7c55cce29f32d1f8f9f1db6bf43223cb3287d81d2ec10aec8de7a5bb7751": {
@@ -136,12 +136,12 @@
   },
   "3877f58a4b6066ca096d5460866805330420a6de0f445480da88897dc81a59cb": {
     "ever_ok": true,
-    "failures": 5,
+    "failures": 6,
     "last_status": "failed"
   },
   "3ac65f127c4b080969c832d7bf18f3804bbbdfa3ef571595534d8e1374b25b21": {
     "ever_ok": true,
-    "failures": 2,
+    "failures": 3,
     "last_status": "failed"
   },
   "3b330572d50a7cbf0bba3c88d43af9371dd065623670a51858964dccc2e9ea0b": {
@@ -181,7 +181,7 @@
   },
   "5c17e99775c3795613d1adb90126e57a232e2f64bc63f0b9dcf8eac45e360ff2": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "6020e30349155e2bb2e6ffa6656cd66a9a446b1ce3da5cb8aff0c6d0ca43e1e1": {
@@ -191,12 +191,12 @@
   },
   "6969ac1163e3952ed0d70a690b6a5e18c5c21263202f1d4f747fb7dc355a536a": {
     "ever_ok": true,
-    "failures": 1,
-    "last_status": "grace"
+    "failures": 0,
+    "last_status": "healthy"
   },
   "6a8a2d1236f4b20cf7a4cc9809a3b94b5f22f0d736be8363d65c3ebc7493bc3a": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "6a997cbf1e2e06468b687c127420cf168ff6fd02c73baa23376b90316b731eae": {
@@ -206,7 +206,7 @@
   },
   "6b605113cbd355fdfb3d9f88d4bead2d32e7785a3d3e8e8211fa78e9c6ab2a46": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "6fbc667e245d63e19ab06bb9f8f756fb3c02f9769ae27669865a5406261bb5c3": {
@@ -221,12 +221,12 @@
   },
   "7a5ad2f6617997dfd28d87a9ec1cb3e9622fd19fc0573bc26167ef9eeea99ac0": {
     "ever_ok": true,
-    "failures": 4,
+    "failures": 5,
     "last_status": "failed"
   },
   "84880fd8b3fccc1fc994b8f6911a3e48f0f95effee7fa1dad7ea30708298dd5d": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "8723360dff8ccf95315d3e081012addc5cd9862377d9ccf4e3ec8b5bf6ac14d6": {
@@ -246,7 +246,7 @@
   },
   "93984c76664c9a27887c00d8fc2cf53482b2d3f8626d280166635c3d454e1239": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "960c2e8db6ff49dea71c0bd4d60807fee7938e649a8a8d4c5d2e8869f01c8faf": {
@@ -271,7 +271,7 @@
   },
   "aab45cddf5f64a3a5ce8191d3b77d83ce899377a7f2abab57afd67d96eb8a60c": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "ab8228fc52276dc4e995ed2db19932d3d947158a17125a72e4efd6f505ac3cc9": {
@@ -286,7 +286,7 @@
   },
   "acd01c93f746cb37c71a17d093032510863598ed8f73a2b06120f8958d52e0cf": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "ae8c1b81e9c5315f3c180237de2bc39734380ae4211ce1c2793e9d3cfa1eb00c": {
@@ -296,17 +296,17 @@
   },
   "bc0d4d2a83ae2c7507a25c191829972cef17d6a6030aab1beb8df5917c99e448": {
     "ever_ok": true,
-    "failures": 1,
-    "last_status": "grace"
+    "failures": 0,
+    "last_status": "healthy"
   },
   "bd3ea42e335b91f5bf9cc9faf37deea90fe3d79a2c4184fab2cd291106705fd8": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "be2cf9d0c2ca69cd884caad66d7dbc6ba78907385e4c37a7c4bf3b55942461c5": {
     "ever_ok": true,
-    "failures": 4,
+    "failures": 5,
     "last_status": "failed"
   },
   "bfa32e004d4c8ea9aa5a6838a6de23d1ce7cae0f9fd687bf1174d8847dcc1364": {
@@ -361,12 +361,12 @@
   },
   "e06739b5f44e95a2b3141f3a15b86a5daf45dd9f999d67ccf935342ca4c82fba": {
     "ever_ok": true,
-    "failures": 5,
+    "failures": 6,
     "last_status": "failed"
   },
   "e63448d2c8cd2a74cb7acd4dc613b73c1562df789b2bd2910dc6650fff22d793": {
     "ever_ok": false,
-    "failures": 6,
+    "failures": 7,
     "last_status": "failed"
   },
   "e6b3928a45a6d0648b4e0b26c4ffc71e5e9a582b1f0f3d859a3f93c8a1e51b14": {
@@ -391,8 +391,8 @@
   },
   "eea46aed447c24154db1d8f3cedbb71ac1c4e2484ec5cb0005fa73d277699c04": {
     "ever_ok": true,
-    "failures": 1,
-    "last_status": "grace"
+    "failures": 2,
+    "last_status": "failed"
   },
   "f1cd27e29700213376e65857fe19e89c467b3806986813470c5ef10dd18094d1": {
     "ever_ok": true,
@@ -401,7 +401,7 @@
   },
   "f2d61489d49c4b0484472e4cd171a090009469cc86093235c78aff0594b226af": {
     "ever_ok": true,
-    "failures": 4,
+    "failures": 5,
     "last_status": "failed"
   },
   "f762c8010f03ac13d439900ff64b522b402d808a68093b4a2f9ede4c9032e7c7": {
